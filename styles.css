@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f0e8;
+    color: #333;
+}
+
+header {
+    background-color: #795548;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    padding: 20px 0;
+}
+
+h2 {
+    color: #795548;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.menu-item {
+    background-color: #e4d5c5;
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid gray;
+    max-width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #795548;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: #4e342e;
+}
+
+#formError {
+    color: red;
+}
+
+#formSuccess {
+    color: green;
+}
+
+.dark {
+    background-color: #222;
+    color: #eee;
+}
+
+.dark h2 {
+    color: #d7b49a;
+}
+
+.dark .menu-item {
+    background-color: #444;
+}
+
+.dark input, .dark textarea {
+    background-color: #eee;
+    color: #222;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
+
+footer {
+    background-color: #795548;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #navigation {
+        display: none;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu { grid-template-columns: 1fr; }
+    header { padding: 10px; }
+    input, textarea { box-sizing: border-box; width: 100%; }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
